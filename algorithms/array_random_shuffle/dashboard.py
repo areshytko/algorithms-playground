@@ -1,11 +1,17 @@
+import os
 from typing import Tuple
+import sys
+import os
 
 import streamlit as st
 import numpy as np
 import plotly.express as px
 
+sys.path.insert(0, os.path.realpath(os.curdir))
+
 from algorithms.array_random_shuffle.simulate import simulate, distribution, average_cosine_similarity, euclidian_distance
 from algorithms.array_random_shuffle.shuffle import wrong_sequential_swap_shuffle, fisher_yates_shuffle, wrong_random_pairs_shuffle
+
 
 st.set_page_config(layout="wide")
 
