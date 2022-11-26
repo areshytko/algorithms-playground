@@ -28,6 +28,15 @@ SHUFFLE_ALGORITHMS = {
     'Wrong Random Pairs Swap Algo': wrong_random_pairs_shuffle,
     'Fisher-Yates Shuffle': fisher_yates_shuffle,
 }
+with st.expander("Dashboard description", expanded=True):
+    st.markdown("""
+    ## Monte Carlo simulation of different array shuffling methods:
+    - **no shuffling** - do the simulation without shuffling
+    - **random** - don't do any shuffle just sample an array from a uniform random distribution
+    - **Wrong Sequential Scan Algo** - wrong intuitive shuffle algorithm 1
+    - **Wrong Random Pairs Swap Algo** - wrong intuitive shuffle algorithm 1
+    - **Fisher-Yates Shuffle** - correct Fisher-Yates Shuffle algorithm 
+    """)
 
 shuffle_algo = st.sidebar.selectbox(label="Shuffle Algorithm", options=SHUFFLE_ALGORITHMS.keys())
 array_size = st.sidebar.number_input("Array Size", min_value=2, value=50)
